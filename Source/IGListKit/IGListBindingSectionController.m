@@ -7,10 +7,10 @@
 
 #import "IGListBindingSectionController.h"
 
-#import <IGListDiffKit/IGListAssert.h>
-#import <IGListKit/IGListBindable.h>
+#import "../IGListDiffKit/IGListAssert.h"
+#import "IGListBindable.h"
 
-#import "IGListArrayUtilsInternal.h"
+#import "./Internal/IGListArrayUtilsInternal.h"
 
 typedef NS_ENUM(NSInteger, IGListDiffingSectionState) {
     IGListDiffingSectionStateIdle = 0,

@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "IGListSectionControllerInternal.h"
+#import "./Internal/IGListSectionControllerInternal.h"
 
-#import <IGListDiffKit/IGListAssert.h>
-#import <IGListDiffKit/IGListMacros.h>
+#import "../IGListDiffKit/IGListAssert.h"
+#import "../IGListDiffKit/IGListMacros.h"
 
 static NSString * const kIGListSectionControllerThreadKey = @"kIGListSectionControllerThreadKey";
 

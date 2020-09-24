@@ -7,7 +7,7 @@
 
 #import "IGListSectionMap.h"
 
-#import <IGListDiffKit/IGListAssert.h>
+#import "../../IGListDiffKit/IGListAssert.h"
 
 #import "IGListSectionControllerInternal.h"
 

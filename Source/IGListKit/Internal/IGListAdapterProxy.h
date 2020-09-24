@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <IGListDiffKit/IGListMacros.h>
+#import "../../IGListDiffKit/IGListMacros.h"
 
 @class IGListAdapter;
 

@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IGListDiffKit/IGListMacros.h>
+#import "../../IGListDiffKit/IGListMacros.h"
 
 @class IGListAdapter;
 

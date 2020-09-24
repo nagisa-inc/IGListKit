@@ -11,13 +11,13 @@
 #import <unordered_map>
 #import <vector>
 
-#import <IGListDiffKit/IGListCompatibility.h>
-#import <IGListDiffKit/IGListExperiments.h>
+#import "../IGListDiffKit/IGListCompatibility.h"
+#import "../IGListDiffKit/IGListExperiments.h"
 
-#import "IGListIndexPathResultInternal.h"
-#import "IGListIndexSetResultInternal.h"
-#import "IGListMoveIndexInternal.h"
-#import "IGListMoveIndexPathInternal.h"
+#import "./Internal/IGListIndexPathResultInternal.h"
+#import "./Internal/IGListIndexSetResultInternal.h"
+#import "./Internal/IGListMoveIndexInternal.h"
+#import "./Internal/IGListMoveIndexPathInternal.h"
 
 using namespace std;
 
@@ -46,7 +46,7 @@ struct IGListRecord {
 
 static id<NSObject> IGListTableKey(__unsafe_unretained id<IGListDiffable> object) {
     id<NSObject> key = [object diffIdentifier];
-    NSCAssert(key != nil, @"Cannot use a nil key for the diffIdentifier of object %@", object);
+//    NSCAssert(key != nil, @"Cannot use a nil key for the diffIdentifier of object %@", object);
     return key;
 }
 
@@ -194,7 +194,7 @@ static id IGListDiffing(BOOL returnIndexPaths,
         IGListEntry *entry = newResultsArray[i].entry;
 
         // grab and pop the top original index. if the item was inserted this will be NSNotFound
-        NSCAssert(!entry->oldIndexes.empty(), @"Old indexes is empty while iterating new item %li. Should have NSNotFound", (long)i);
+//        NSCAssert(!entry->oldIndexes.empty(), @"Old indexes is empty while iterating new item %li. Should have NSNotFound", (long)i);
         const NSInteger originalIndex = entry->oldIndexes.top();
         entry->oldIndexes.pop();
 
@@ -296,9 +296,9 @@ static id IGListDiffing(BOOL returnIndexPaths,
         addIndexToMap(returnIndexPaths, toSection, i, newArray[i], newMap);
     }
 
-    NSCAssert((oldCount + [mInserts count] - [mDeletes count]) == newCount,
-              @"Sanity check failed applying %lu inserts and %lu deletes to old count %li equaling new count %li",
-              (unsigned long)[mInserts count], (unsigned long)[mDeletes count], (long)oldCount, (long)newCount);
+//    NSCAssert((oldCount + [mInserts count] - [mDeletes count]) == newCount,
+//              @"Sanity check failed applying %lu inserts and %lu deletes to old count %li equaling new count %li",
+//              (unsigned long)[mInserts count], (unsigned long)[mDeletes count], (long)oldCount, (long)newCount);
 
     if (returnIndexPaths) {
         return [[IGListIndexPathResult alloc] initWithInserts:mInserts

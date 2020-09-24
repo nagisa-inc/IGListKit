@@ -6,15 +6,15 @@
  */
 
 #import "IGListAdapterUpdater.h"
-#import "IGListAdapterUpdaterInternal.h"
+#import "./Internal/IGListAdapterUpdaterInternal.h"
 
-#import <IGListDiffKit/IGListAssert.h>
+#import "../IGListDiffKit/IGListAssert.h"
 
-#import "IGListArrayUtilsInternal.h"
-#import "IGListIndexSetResultInternal.h"
-#import "IGListMoveIndexPathInternal.h"
-#import "IGListReloadIndexPath.h"
-#import "UICollectionView+IGListBatchUpdateData.h"
+#import "./Internal/IGListArrayUtilsInternal.h"
+#import "../IGListDiffKit/Internal/IGListIndexSetResultInternal.h"
+#import "../IGListDiffKit/Internal/IGListMoveIndexPathInternal.h"
+#import "./Internal/IGListReloadIndexPath.h"
+#import "./Internal/UICollectionView+IGListBatchUpdateData.h"
 
 @implementation IGListAdapterUpdater
 
